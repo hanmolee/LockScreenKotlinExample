@@ -5,4 +5,6 @@
     <string name="lockscrenOff">LockScreen Turn Off</string>
     <string name="showLockScreenText">Show LockScreen</string>
     <string name="unlock">UnLock</string>
+    <string name="lockScreenText">LockScreen</string>
+    <string name="lockScreenSwipeText"><![CDATA[slide to unlock >>]]></string>
 </resources>

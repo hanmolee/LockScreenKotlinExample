@@ -66,7 +66,7 @@ class LockScreenService : Service(){
         super.onCreate()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            MyNotificationManager.createMainNotificationChannel(this@LockScreenService)
+            //MyNotificationManager.createMainNotificationChannel(this@LockScreenService)
             startForeground(LockScreenApplication.notificationId, createNotificationCompatBuilder().build())
         }
     }
