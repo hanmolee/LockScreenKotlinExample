@@ -12,6 +12,7 @@ class LockScreenApplication : MultiDexApplication() {
 
     companion object {
         private var instance: LockScreenApplication? = null
+        const val notificationId: Int = 1
 
         fun applicationContext() : Context? {
             return instance?.applicationContext
