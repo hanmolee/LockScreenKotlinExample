@@ -39,12 +39,7 @@ dependencies {
     implementation "com.android.support:design:$SupportVersion"
     implementation "org.jetbrains.anko:anko-commons:$AnkoVersion"
 
-
     implementation 'com.android.support:multidex:1.0.3'
-
-    implementation "io.reactivex.rxjava2:rxjava:$RxJavaVersion"
-    implementation "io.reactivex.rxjava2:rxandroid:$RxAndroidVersion"
-    implementation "com.jakewharton.rxbinding2:rxbinding-kotlin:$RxBindingVersion"
 
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'

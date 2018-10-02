@@ -4,6 +4,8 @@ import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.LockScreenActivity
+import com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.service.LockScreenService
 import com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.util.LockScreen
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,9 +17,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         initLockScreenSwitch()
-        setChangeLockscreenSwitch()
+        setChangeLockScreenSwitch()
+        setShowLockScreenButton()
+
+    }
+
+    private fun setShowLockScreenButton() {
+        showLockScreenViewButton.setOnClickListener {
+            startActivity(LockScreenActivity.newIntent(this@MainActivity))
+        }
     }
 
     private fun setLockScreenStatus(lockScreenStatus : Boolean) {
@@ -27,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setChangeLockscreenSwitch() {
+    private fun setChangeLockScreenSwitch() {
         lockScreeSwitch.setOnCheckedChangeListener { _, isChecked ->
             setLockScreenStatus(isChecked)
             if (isChecked) {
