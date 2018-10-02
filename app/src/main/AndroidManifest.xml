@@ -2,8 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lockscreen.hanmo.lockscreenkotlinexample">
 
+    <!--잠금화면 퍼미션-->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.PHONE_STATE_STATE" />
+
+
     <application
-        android:allowBackup="true"
+        android:name=".LockScreenApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -16,6 +25,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".lockscreen.LockScreenActivity"
+            android:showOnLockScreen="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/lockscreenView"/>
+
+        <service android:name=".lockscreen.service.LockScreenService" />
+
     </application>
 
 </manifest>
