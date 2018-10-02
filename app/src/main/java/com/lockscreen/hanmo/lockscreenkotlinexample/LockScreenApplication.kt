@@ -4,6 +4,10 @@ import android.content.Context
 import android.support.multidex.MultiDex
 import android.support.multidex.MultiDexApplication
 
+/**
+ * 잠금화면 Example Application
+ * Created by hanmo on 2018. 10. 2..
+ */
 class LockScreenApplication : MultiDexApplication() {
 
     init {

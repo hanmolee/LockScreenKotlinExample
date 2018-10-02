@@ -10,7 +10,6 @@ import android.view.WindowManager
 import com.lockscreen.hanmo.lockscreenkotlinexample.R
 import com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.util.ButtonUnLock
 import com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.util.ViewUnLock
-import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.activty_lockscreen.*
 
 /**
@@ -20,7 +19,6 @@ import kotlinx.android.synthetic.main.activty_lockscreen.*
 
 class LockScreenActivity : AppCompatActivity() {
 
-    private val compositeDisposable: CompositeDisposable by lazy { CompositeDisposable() }
 
     companion object {
         fun newIntent(context: Context?) : Intent {

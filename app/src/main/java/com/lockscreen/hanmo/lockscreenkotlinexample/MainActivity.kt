@@ -9,6 +9,11 @@ import com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.service.LockScree
 import com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.util.LockScreen
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * Main Activity
+ * Created by hanmo on 2018. 10. 2..
+ */
+
 class MainActivity : AppCompatActivity() {
 
     private val lockScreenStatusPreferences by lazy { getSharedPreferences("LockScreenStatus", Context.MODE_PRIVATE) }
