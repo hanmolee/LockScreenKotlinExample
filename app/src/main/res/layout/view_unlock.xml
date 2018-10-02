@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:padding="3dp">
+
+    <FrameLayout
+        android:id="@+id/swipeButton"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true" >
+        <ImageView
+            android:src="@drawable/lock_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/lockedImage"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_locked"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

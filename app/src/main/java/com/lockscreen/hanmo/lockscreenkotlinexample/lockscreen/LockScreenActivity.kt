@@ -8,7 +8,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.WindowManager
 import com.lockscreen.hanmo.lockscreenkotlinexample.R
-import com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.util.UnLock
+import com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.util.ButtonUnLock
+import com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.util.ViewUnLock
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.activty_lockscreen.*
 
@@ -63,13 +64,21 @@ class LockScreenActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        setUnlock()
+        setButtonUnlock()
+        setViewUnlock()
     }
 
-    private fun setUnlock() {
-        lockScreenView.x = 0f
+    private fun setButtonUnlock() {
+        swipeUnLockButton.setOnUnlockListenerRight(object : ButtonUnLock.OnUnlockListener {
+            override fun onUnlock() {
+                finish()
+            }
+        })
+    }
 
-        lockScreenView.setOnTouchListener(object : UnLock(this, lockScreenView) {
+    private fun setViewUnlock() {
+        lockScreenView.x = 0f
+        lockScreenView.setOnTouchListener(object : ViewUnLock(this, lockScreenView) {
             override fun onFinish() {
                 finish()
                 super.onFinish()

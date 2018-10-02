@@ -4,4 +4,5 @@
     <string name="lockscrenOn">LockScreen Turn On</string>
     <string name="lockscrenOff">LockScreen Turn Off</string>
     <string name="showLockScreenText">Show LockScreen</string>
+    <string name="unlock">UnLock</string>
 </resources>

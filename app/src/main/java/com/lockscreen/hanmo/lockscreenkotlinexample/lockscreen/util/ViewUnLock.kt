@@ -13,7 +13,7 @@ import android.view.animation.TranslateAnimation
  * Created by hanmo on 2018. 10. 2..
  */
 
-open class UnLock(val context: Context, val lockScreenView: ConstraintLayout) : View.OnTouchListener {
+open class ViewUnLock(val context: Context, val lockScreenView: ConstraintLayout) : View.OnTouchListener {
 
     private var firstTouchX = 0f
     private var layoutPrevX = 0f
@@ -47,7 +47,7 @@ open class UnLock(val context: Context, val lockScreenView: ConstraintLayout) : 
                     return false
                 }
             }
-            MotionEvent.ACTION_UP -> { // 1
+            MotionEvent.ACTION_UP -> {
                 if (isLockOpen) {
                     lockScreenView.x = lastLayoutX
                     lockScreenView.y = 0f
