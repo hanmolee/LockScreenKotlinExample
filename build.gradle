@@ -3,7 +3,6 @@
 buildscript {
     ext.Kotlin_version = '1.2.71'
     ext.gradleVersion = '3.2.0'
-    ext.RealmVersion = '5.0.0'
     ext.AnkoVersion='0.10.3'
     ext.SupportVersion = '28.0.0'
     ext.RxBindingVersion = '2.1.1'
@@ -16,7 +15,6 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$gradleVersion"
-        classpath "io.realm:realm-gradle-plugin:$RealmVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$Kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong

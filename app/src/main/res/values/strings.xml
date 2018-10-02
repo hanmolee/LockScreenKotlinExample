@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">LockScreenKotlinExample</string>
+    <string name="lockScreenSwitchText">LockScreen Switch</string>
+    <string name="lockscrenOn">LockScreen Turn On</string>
+    <string name="lockscrenOff">LockScreen Turn Off</string>
 </resources>
