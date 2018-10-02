@@ -74,6 +74,7 @@ class LockScreenActivity : AppCompatActivity() {
         })
     }
 
+
     private fun setViewUnlock() {
         lockScreenView.x = 0f
         lockScreenView.setOnTouchListener(object : ViewUnLock(this, lockScreenView) {
@@ -82,5 +83,9 @@ class LockScreenActivity : AppCompatActivity() {
                 super.onFinish()
             }
         })
+    }
+
+    override fun onBackPressed() {
+
     }
 }
