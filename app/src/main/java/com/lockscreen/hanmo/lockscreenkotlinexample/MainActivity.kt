@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 LockScreen.active()
                 Snackbar.make(lockScreeSwitch, getString(R.string.lockscrenOn), Snackbar.LENGTH_LONG).show()
             } else {
-                LockScreen.deactivate()
+                LockScreen.deActivate()
                 Snackbar.make(lockScreeSwitch, getString(R.string.lockscrenOff), Snackbar.LENGTH_LONG).show()
             }
         }
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         if (hasLockScreen) {
             LockScreen.active()
         }
-        else { LockScreen.deactivate() }
+        else { LockScreen.deActivate() }
     }
 
 }

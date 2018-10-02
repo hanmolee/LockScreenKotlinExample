@@ -7,4 +7,12 @@ package com.lockscreen.hanmo.lockscreenkotlinexample.lockscreen.util
 
 object LockScreen {
 
+    fun active() {
+
+    }
+
+    fun deActivate() {
+
+    }
+
 }
