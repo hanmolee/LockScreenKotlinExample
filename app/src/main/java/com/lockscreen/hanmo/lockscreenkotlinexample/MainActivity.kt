@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initLockScreenSwitch() {
-        val hasLockScreen = lockScreenStatusPreferences.getBoolean("LockScreenStatus", false)
+        val hasLockScreen = LockScreen.getLockScreenStatus()
         lockScreeSwitch.isChecked = hasLockScreen
         if (hasLockScreen) {
             LockScreen.active()

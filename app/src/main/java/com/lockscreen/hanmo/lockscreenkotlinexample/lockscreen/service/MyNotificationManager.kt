@@ -5,6 +5,11 @@ import android.content.Context
 import android.os.Build
 import android.support.annotation.RequiresApi
 
+
+/**
+ * Oreo 이상일 경우 Notification Channel 생성
+ * Created by hanmo on 2018. 10. 2..
+ */
 object MyNotificationManager {
 
     private val CHANNEL_ID = "LockScreen Example ID"
