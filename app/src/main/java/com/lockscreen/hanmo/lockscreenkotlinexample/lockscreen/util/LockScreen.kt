@@ -30,6 +30,13 @@ object LockScreen {
         }
     }
 
+    fun getLockScreenStatus() : Boolean {
+        val lockScreenPreferences = LockScreenApplication.applicationContext()?.run {
+            getSharedPreferences("LockScreenStatus", Context.MODE_PRIVATE)
+        }
+
+        return lockScreenPreferences?.getBoolean("LockScreenStatus", false)!!
+    }
 
     val isActive: Boolean
         get() = LockScreenApplication.applicationContext()?.let {

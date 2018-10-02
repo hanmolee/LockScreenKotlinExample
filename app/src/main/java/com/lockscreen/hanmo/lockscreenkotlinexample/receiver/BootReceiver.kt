@@ -14,12 +14,7 @@ class BootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         intent?.run {
             if (action == Intent.ACTION_BOOT_COMPLETED) {
-
-                val hasLockScreen = context?.run {
-                    getSharedPreferences("LockScreenStatus", Context.MODE_PRIVATE)
-                }
-
-                if (hasLockScreen?.getBoolean("LockScreenStatus", false)!!) {
+                if (LockScreen.getLockScreenStatus()) {
                     LockScreen.active()
                 }
             }

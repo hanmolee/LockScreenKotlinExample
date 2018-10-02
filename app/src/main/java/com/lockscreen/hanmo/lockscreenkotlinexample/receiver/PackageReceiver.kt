@@ -23,10 +23,7 @@ class PackageReceiver : BroadcastReceiver() {
                 //Intent.ACTION_PACKAGE_ADDED -> { }
                 //Intent.ACTION_PACKAGE_REMOVED -> { }
                 Intent.ACTION_MY_PACKAGE_REPLACED -> {
-                    val hasLockScreen = context?.run {
-                        getSharedPreferences("LockScreenStatus", Context.MODE_PRIVATE)
-                    }
-                    if (hasLockScreen?.getBoolean("LockScreenStatus", false)!!) {
+                    if (LockScreen.getLockScreenStatus()) {
                         LockScreen.active()
                     }
                 }
